@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Radhiya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tentang-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .foto-profil {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #222;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: #222;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .social-icons svg {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Halo, Saya Radhiya Nasta Novitri</h1>
+    <nav>
+      <a href="#tentang">Tentang</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <div class="tentang-container">
+      <img src="Radhiya.jpg" alt="Foto Profil Radhiya" class="foto-profil">
+      <p>Saya adalah siswi SMKN 7 Batam jurusan Teknik Jaringan Akses dan Telekomunikasi (TJAT), kelas XII TJAT 3. Saya dikenal sebagai pribadi yang bertanggung jawab, disiplin, dan memiliki semangat belajar tinggi dalam bidang jaringan dan teknologi.</p>
+    </div>
+  </section>
+
+  <section id="keahlian">
+    <h2>Keahlian</h2>
+    <div class="skills">
+      <div class="card">Menyambung kabel fiber optik</div>
+      <div class="card">HTML & CSS</div>
+      <div class="card">Manajemen jaringan dasar</div>
+    </div>
+  </section>
+
+  <section id="proyek">
+    <h2>Proyek</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Website Profil Sekolah</h3>
+        <p>Membuat halaman profil SMK dengan HTML dan CSS, menampilkan informasi jurusan, prestasi, dan berita sekolah.</p>
+      </div>
+      <div class="card">
+        <h3>Instalasi Jaringan LAN</h3>
+        <p>Melakukan instalasi jaringan lokal di laboratorium sekolah, termasuk pengkabelan dan konfigurasi router.</p>
+      </div>
+      <div class="card">
+        <h3>Simulasi Jaringan Cisco Packet Tracer</h3>
+        <p>Merancang topologi jaringan dan simulasi routing menggunakan Cisco Packet Tracer sebagai latihan teknis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <form onsubmit="kirimPesan(event)">
+      <input type="text" placeholder="‪+62 822‑8351‑8097‬" required />
+      <input type="email" placeholder="radhiya.novitri07@gmail.com" required />
+      <textarea placeholder="Tulis pesan Anda..." required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Radhiya Nasta Novitri</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/" target="_blank" title="Instagram">
+        <i data-lucide="instagram"></i>
+      </a>
+      <a href="mailto:radhiya.novitri07@gmail.com" title="Email">
+        <i data-lucide="mail"></i>
+      </a>
+      <a href="https://wa.me/6282283518097" target="_blank" title="WhatsApp">
+        <i data-lucide="message-circle"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function kirimPesan(e) {
+      e.preventDefault();
+      alert("Pesan berhasil dikirim! Terima kasih.");
+    }
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
